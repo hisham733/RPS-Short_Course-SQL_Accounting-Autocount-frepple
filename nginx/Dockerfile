@@ -13,7 +13,6 @@ COPY prepare_production.sh /prepare_production
 # Install frappe
 RUN /install_frappe ${FRAPPE_BRANCH} && \
   # Install erpnext
-  /install_erpnext && \
   # Install required apps with following command
   # /install_app <app_name> <repo> <app_branch>
   /install_app metabase_integration https://github.com/${GITHUB_OWNER}/ERPNext-Metabase-Integration master && \
